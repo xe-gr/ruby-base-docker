@@ -10,3 +10,5 @@ docker build --file image/base/Dockerfile .  \
   --label "org.opencontainers.image.source=https://github.com/xe-gr/ruby-base-docker" \
   --label "org.opencontainers.image.version=${VERSION}" \
   --tag "xegr/ruby-base:${VERSION}"
+
+docker push "xegr/ruby-base:${VERSION}"
