@@ -3,8 +3,8 @@ FROM ruby:2.6.5-slim-buster
 ARG IMAGE_USER
 ENV IMAGE_USER ${IMAGE_USER:-xe}
 
-RUN set -eux; \
-  echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/90$IMAGE_USER \
+RUN set -eux \
+  && echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/90$IMAGE_USER \
   && echo 'DPkg::Options "--force-confnew";' >> /etc/apt/apt.conf.d/90$IMAGE_USER \
   && echo 'gem: --no-document' > /etc/gemrc \
   && mkdir -p /usr/share/man/man1 \

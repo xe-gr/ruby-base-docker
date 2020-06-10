@@ -3,7 +3,7 @@
 DATE=$(date -u +"%Y-%m-%dT%T%z")
 VERSION=2.6.5-1
 
-docker build --file image/base/Dockerfile .  \
+docker build --file image/base/Dockerfile . \
   --build-arg IMAGE_USER="rodeo" \
   --label "org.opencontainers.image.created=${DATE}" \
   --label "org.opencontainers.image.title=ruby-base" \
