@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 DATE=$(date -u +"%Y-%m-%dT%T%z")
-VERSION=2.6.5-1
+RUBY_VERSION=2.6.5
+IMAGE_VERSION=1
+VERSION="${RUBY_VERSION}-${IMAGE_VERSION}"
 
 docker build --file image/base/Dockerfile . \
   --build-arg IMAGE_USER="rodeo" \
