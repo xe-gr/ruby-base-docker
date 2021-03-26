@@ -13,6 +13,7 @@ RUN set -eux \
     curl \
     gnupg \
     xz-utils \
+    shared-mime-info \
     sudo \
     pkg-config \
     build-essential \

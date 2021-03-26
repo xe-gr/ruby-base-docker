@@ -2,7 +2,7 @@
 
 DATE=$(date -u +"%Y-%m-%dT%T%z")
 RUBY_VERSION=2.6.5
-IMAGE_VERSION=2
+IMAGE_VERSION=3
 VERSION="${RUBY_VERSION}-${IMAGE_VERSION}"
 
 docker build --file image/base/Dockerfile . \
